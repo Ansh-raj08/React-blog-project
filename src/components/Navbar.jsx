@@ -1,15 +1,33 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+
+const navItems = [
+    { to: '/', label: 'Home' },
+    { to: '/bollywood', label: 'Bollywood' },
+    { to: '/hollywood', label: 'Hollywood' },
+    { to: '/food', label: 'Food' },
+    { to: '/fitness', label: 'Fitness' },
+    { to: '/technology', label: 'Technology' },
+]
 
 const Navbar = () => {
     return (
-        <div><Link to="/">Home</Link>
-            <Link to="/Bollywood">Bollywood</Link>
-            <Link to="/Hollywood">Hollywood</Link>
-            <Link to="/Food">Food</Link>
-            <Link to="/Fitness">Fitness</Link>
-            <Link to="/Technology">Technology</Link>
-        </div>
+        <nav className="blog-navbar" aria-label="Primary">
+            <div className="blog-navbar__list">
+                {navItems.map((item) => (
+                    <NavLink
+                        key={item.to}
+                        to={item.to}
+                        end={item.to === '/'}
+                        className={({ isActive }) =>
+                            `blog-navbar__link${isActive ? ' blog-navbar__link--active' : ''}`
+                        }
+                    >
+                        <span>{item.label}</span>
+                    </NavLink>
+                ))}
+            </div>
+        </nav>
     )
 }
 

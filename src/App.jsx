@@ -15,12 +15,12 @@ const App = () => {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/Bollywood' element={<Bollywood />} />
-          <Route path='/Hollywood' element={<Hollywood />} />
-          <Route path='/Food' element={<Food />} />
-          <Route path='/Fitness' element={<Fitness />} />
-          <Route path='/Technology' element={<Technology />} />
+          <Route path='/' element={<Home/>} />
+          <Route path='/bollywood' element={<Bollywood />} />
+          <Route path='/hollywood' element={<Hollywood />} />
+          <Route path='/food' element={<Food />} />
+          <Route path='/fitness' element={<Fitness />} />
+          <Route path='/technology' element={<Technology />} />
         </Routes>
       </BrowserRouter>
     </div>
