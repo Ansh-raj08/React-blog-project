@@ -1,16 +1,95 @@
-# React + Vite
+# React Blog
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A category-based React blog app built with Vite and React Router.
 
-Currently, two official plugins are available:
+## Current Progress
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Completed
 
-## React Compiler
+- Project setup with Vite + React
+- Routing setup with `react-router-dom`
+- Shared navigation bar with active route highlighting
+- Responsive navbar styling (desktop + horizontal scroll on small screens)
+- Centralized data source in `src/Data.js`
+- Category routes created:
+	- `/`
+	- `/bollywood`
+	- `/hollywood`
+	- `/food`
+	- `/fitness`
+	- `/technology`
+- Bollywood page connected to data filtering by category
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### In Progress
 
-## Expanding the ESLint configuration
+- Home page content (currently placeholder)
+- Hollywood page content (currently placeholder)
+- Food page content (currently placeholder)
+- Fitness page content (currently placeholder)
+- Technology page content (currently placeholder)
+- Consistent card layout/UI for all category pages
+- Detail views, search/filter UX, and richer interactions
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- React 19
+- React DOM 19
+- React Router DOM 7
+- Vite 8
+- ESLint 9
+
+## Project Structure
+
+```
+react-blog/
+	src/
+		components/
+			Navbar.jsx
+			Home.jsx
+			Bollywood.jsx
+			Hollywood.jsx
+			Food.jsx
+			Fitness.jsx
+			Technology.jsx
+		Data.js
+		App.jsx
+		App.css
+		index.css
+```
+
+## How to Run
+
+1. Install dependencies:
+
+	 ```bash
+	 npm install
+	 ```
+
+2. Start development server:
+
+	 ```bash
+	 npm run dev
+	 ```
+
+3. Open the local URL shown in terminal (usually `http://localhost:5173`).
+
+## Available Scripts
+
+- `npm run dev` - Start Vite dev server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+
+## Data Notes
+
+- Blog entries are currently stored in `src/Data.js`.
+- Category pages are expected to render posts by filtering on the `category` field.
+- Right now, this filtering is implemented on the Bollywood page.
+
+## Next Milestones
+
+- Build reusable post card component
+- Connect all category pages to filtered data
+- Add layout sections on Home (top stories, latest, popular)
+- Add post detail route and page
+- Improve accessibility and loading performance
